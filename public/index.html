@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Teacher Management System</h1>
+            <p>Manage your teachers easily</p>
+        </header>
+
+
+        <!-- Teacher Form -->
+
+        <div class="form-card">
+
+            <h2 id="formTitle">Add Teacher</h2>
+
+            <form id="teacherForm">
+
+                <input type="hidden" id="teacherId">
+
+                <div class="form-group">
+
+                    <label for="name">Teacher Name</label>
+
+                    <input type="text" id="name" placeholder="Enter teacher name" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="age">Age</label>
+
+                    <input type="number" id="age" placeholder="Enter age" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="salary">Salary</label>
+
+                    <input type="number" id="salary" placeholder="Enter salary" required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="education">Education</label>
+
+                    <input type="text" id="education" placeholder="Enter education" required>
+
+                </div>
+
+
+                <div class="buttons">
+
+                    <button type="submit" id="submitButton">
+                        Add Teacher
+                    </button>
+
+                    <button type="button" id="cancelButton" onclick="cancelEdit()" style="display: none;">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- Teacher List -->
+
+        <div class="table-card">
+
+            <div class="table-header">
+
+                <div>
+                    <h2>Teacher List</h2>
+                    <p>All registered teachers</p>
+                </div>
+
+                <button onclick="loadTeachers()" class="refresh-button">
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Salary</th>
+                            <th>Education</th>
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="teacherTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
